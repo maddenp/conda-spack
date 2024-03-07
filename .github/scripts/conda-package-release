@@ -1,0 +1,8 @@
+#!/bin/bash -eux
+
+set +ux
+source conda/etc/profile.d/conda.sh
+conda activate
+set -ux
+f=recipe/meta.json
+anaconda -t $ANACONDA_TOKEN upload conda/conda-bld/noarch/$(jq -r .name $f)-$(jq -r .version $f)-*.tar.bz2

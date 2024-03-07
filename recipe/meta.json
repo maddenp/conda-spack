@@ -1,0 +1,13 @@
+{
+  "build": "py_0",
+  "buildnum": "0",
+  "name": "spack",
+  "packages": {
+    "dev": [
+      "python",
+      "rsync"
+    ],
+    "run": []
+  },
+  "version": "0.21.2"
+}
