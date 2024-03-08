@@ -4,18 +4,16 @@ package:
   name: spack
   version: {{ version }}
 source:
-  git_url: git@github.com:spack/spack.git
-  git_rev: v{{ version }}
+  url: https://github.com/spack/spack/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: b1860537ba00c55fa0b2517ce9dbfe0e415600892c48e3dc4e15ee8da0f50dd3
 build:
   include_recipe: false
   missing_dso_whitelist:
     - "*/libc.so.6"
-  noarch: python
+  noarch: generic
   number: 0
-  script: . share/spack/setup-env.sh && spack clone spack && rsync -av spack/ $PREFIX/
 requirements:
   build:
-    - python
     - rsync
 about:
   license: APACHE

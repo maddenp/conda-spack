@@ -1,10 +1,9 @@
 {
-  "build": "py_0",
+  "build": "0",
   "buildnum": "0",
   "name": "spack",
   "packages": {
     "dev": [
-      "python",
       "rsync"
     ],
     "run": []
